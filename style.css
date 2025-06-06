@@ -1,0 +1,81 @@
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+textarea {
+  width: 80%;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #2196f3;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+button:hover {
+  transform: scale(1.05);
+  background-color: #1e88e5;
+}
+
+.response-card {
+  background: #1f1f1f;
+  margin: 10px auto;
+  padding: 15px;
+  width: 80%;
+  border-radius: 15px;
+  animation: bounceIn 0.7s ease;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.hidden {
+  display: none;
+}
+
+.crown {
+  font-size: 2rem;
+  margin-top: 20px;
+  animation: shine 1s infinite alternate;
+}
+
+@keyframes shine {
+  from { color: gold; }
+  to { color: #ffecb3; transform: scale(1.1); }
+}
+
+footer {
+  margin-top: 30px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.loading-screen {
+  font-size: 1.5rem;
+  margin-top: 40vh;
+  animation: pulse 1s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}

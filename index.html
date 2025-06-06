@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>من قوی‌ترم!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loading" class="loading-screen">در حال بارگذاری...</div>
+
+  <div id="game" class="hidden">
+    <h1>🎮 من قوی‌ترم!</h1>
+
+    <div id="player1Phase">
+      <textarea id="player1Input" placeholder="بازیکن ۱ بنویس..." rows="2"></textarea>
+      <button onclick="nextPhase()">بعدی</button>
+    </div>
+
+    <div id="player2Phase" class="hidden">
+      <textarea id="player2Input" placeholder="بازیکن ۲ بنویس..." rows="2"></textarea>
+      <button onclick="showResponses()">نشان دادن پاسخ‌ها</button>
+    </div>
+
+    <div id="responses" class="hidden">
+      <div class="response-card" id="p1Resp"></div>
+      <div class="response-card" id="p2Resp"></div>
+    </div>
+
+    <div id="voting" class="hidden">
+      <p>به نظر شما کدام پاسخ خلاقانه‌تر بود؟</p>
+      <button onclick="vote('p1')">🧠 پاسخ بازیکن ۱</button>
+      <button onclick="vote('p2')">⚡ پاسخ بازیکن ۲</button>
+    </div>
+
+    <div id="scoreBoard">
+      <p>بازیکن ۱: <span id="p1Score">0</span></p>
+      <p>بازیکن ۲: <span id="p2Score">0</span></p>
+    </div>
+
+    <div id="winner" class="hidden crown">👑 پادشاه خلاقیت: <span id="winnerName"></span></div>
+  </div>
+
+  <footer>سازندگان: بردیا و هوش مصنوعی | 🇮🇷 Made in Iran</footer>
+  <audio id="bgMusic" src="music.mp3" autoplay loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
